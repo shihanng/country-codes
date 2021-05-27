@@ -2,10 +2,12 @@ package main
 
 import (
 	"context"
-	"io/ioutil"
+	"fmt"
 	"log"
+	"strings"
 
 	"github.com/chromedp/chromedp"
+	"github.com/shihanng/country-codes/src/extract"
 )
 
 const (
@@ -18,7 +20,6 @@ const (
 	rowSelector            = `div > div.v-customcomponent.v-widget.v-has-width.v-has-height > div > div > div:nth-child(2) > div > div > div.v-tabsheet-content.v-tabsheet-content-header > div > div > div > div > div > div.v-slot.v-slot-borderless > div > div.v-panel-content.v-panel-content-borderless.v-scrollable > div > div > div.v-slot.v-slot-search-result-layout > div > div:nth-child(2) > div.v-grid.v-widget.country-code.v-grid-country-code.v-has-width > div.v-grid-tablewrapper > table > tbody > tr:nth-child(242) > td:nth-child(2)`
 
 	countryName    = `Vierges`
-	outputFilename = `country_codes.html`
 )
 
 func main() {
@@ -40,7 +41,12 @@ func main() {
 		log.Fatal(err)
 	}
 
-	if err := ioutil.WriteFile(outputFilename, []byte(htmlContent), 0644); err != nil {
+	r := strings.NewReader(htmlContent)
+
+	codes, err := extract.ExtractAlpha2Code(r)
+	if err != nil {
 		log.Fatal(err)
 	}
+
+	fmt.Println(codes)
 }
