@@ -2,8 +2,9 @@ package main
 
 import (
 	"context"
-	"fmt"
+	"encoding/csv"
 	"log"
+	"os"
 	"strings"
 
 	"github.com/chromedp/chromedp"
@@ -19,7 +20,7 @@ const (
 	resultsPerPageSelector = `div > div.v-customcomponent.v-widget.v-has-width.v-has-height > div > div > div:nth-child(2) > div > div > div.v-tabsheet-content.v-tabsheet-content-header > div > div > div > div > div > div.v-slot.v-slot-search-header > div > div:nth-child(5) > div:nth-child(3) > div > select`
 	rowSelector            = `div > div.v-customcomponent.v-widget.v-has-width.v-has-height > div > div > div:nth-child(2) > div > div > div.v-tabsheet-content.v-tabsheet-content-header > div > div > div > div > div > div.v-slot.v-slot-borderless > div > div.v-panel-content.v-panel-content-borderless.v-scrollable > div > div > div.v-slot.v-slot-search-result-layout > div > div:nth-child(2) > div.v-grid.v-widget.country-code.v-grid-country-code.v-has-width > div.v-grid-tablewrapper > table > tbody > tr:nth-child(242) > td:nth-child(2)`
 
-	countryName    = `Vierges`
+	countryName = `Vierges`
 )
 
 func main() {
@@ -48,5 +49,20 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println(codes)
+	w := csv.NewWriter(os.Stdout)
+	if err := w.Write([]string{"code", "english_short_name"}); err != nil {
+		log.Fatalln("error writing record to csv:", err)
+	}
+
+	for _, code := range codes {
+		if err := w.Write([]string{code.Code, code.EnglishShortName}); err != nil {
+			log.Fatalln("error writing record to csv:", err)
+		}
+	}
+
+	w.Flush()
+
+	if err := w.Error(); err != nil {
+		log.Fatal(err)
+	}
 }
