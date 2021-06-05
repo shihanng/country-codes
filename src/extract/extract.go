@@ -5,6 +5,7 @@ import (
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
+	"github.com/cockroachdb/errors"
 )
 
 type Alpha2Code struct {
@@ -15,7 +16,7 @@ type Alpha2Code struct {
 func ExtractAlpha2Code(r io.Reader) ([]Alpha2Code, error) {
 	doc, err := goquery.NewDocumentFromReader(r)
 	if err != nil {
-		return nil, err
+		return nil, errors.Wrap(err, "extract: read html")
 	}
 
 	var codes []Alpha2Code
@@ -70,7 +71,7 @@ type Subdivision struct {
 func ExtractDetail(r io.Reader) (*Detail, error) {
 	doc, err := goquery.NewDocumentFromReader(r)
 	if err != nil {
-		return nil, err
+		return nil, errors.Wrap(err, "extract: read html")
 	}
 
 	var detail Detail
