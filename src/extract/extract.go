@@ -47,6 +47,24 @@ type Detail struct {
 	Independent        string
 	TerritoryName      string
 	Status             string
+	Languages          []AdministrativeLanguage
+	Subdivisions       []Subdivision
+}
+
+type AdministrativeLanguage struct {
+	Alpha2         string
+	Alpha3         string
+	LocalShortName string
+}
+
+type Subdivision struct {
+	Category           string
+	Code31662          string
+	Name               string
+	LocalVariant       string
+	LanguageCode       string
+	RomanizationSystem string
+	ParentSubdivision  string
 }
 
 func ExtractDetail(r io.Reader) (*Detail, error) {
@@ -67,6 +85,23 @@ func ExtractDetail(r io.Reader) (*Detail, error) {
 		detail.Independent = strings.TrimSpace(s.Find("div:nth-child(8) > div.core-view-field-value").Text())
 		detail.TerritoryName = strings.TrimSpace(s.Find("div:nth-child(9) > div.core-view-field-value").Text())
 		detail.Status = strings.TrimSpace(s.Find("div:nth-child(10) > div.core-view-field-value").Text())
+	})
+
+	doc.Find("#country-additional-info > table > tbody > tr").Each(func(_ int, s *goquery.Selection) {
+		var al AdministrativeLanguage
+		al.Alpha2 = strings.TrimSpace(s.Find("#country-additional-info > table > tbody > tr > td:nth-child(1)").Text())
+		al.Alpha3 = strings.TrimSpace(s.Find("#country-additional-info > table > tbody > tr > td:nth-child(2)").Text())
+		al.LocalShortName = strings.TrimSpace(s.Find("#country-additional-info > table > tbody > tr > td:nth-child(3)").Text())
+
+		detail.Languages = append(detail.Languages, al)
+	})
+
+	doc.Find("#subdivision > tbody > tr").Each(func(_ int, s *goquery.Selection) {
+		var sub Subdivision
+		sub.Category = strings.TrimSpace(s.Find("#subdivision > tbody > tr > td:nth-child(1)").Text())
+		sub.Code31662 = strings.TrimSpace(s.Find("#subdivision > tbody > tr > td:nth-child(2)").Text())
+
+		detail.Subdivisions = append(detail.Subdivisions, sub)
 	})
 
 	return &detail, nil

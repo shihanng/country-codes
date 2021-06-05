@@ -1,9 +1,11 @@
 package extract
 
 import (
+	"encoding/json"
 	"os"
 	"testing"
 
+	"github.com/sebdah/goldie/v2"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -15,19 +17,12 @@ func TestExtractDetail(t *testing.T) {
 	require.NoError(t, err)
 	defer f.Close()
 
-	expected := Detail{
-		Alpha2Code:         "BR",
-		ShortName:          "BRAZIL",
-		ShortNameLowerCase: "Brazil",
-		FullName:           "the Federative Republic of Brazil",
-		Alpha3Code:         "BRA",
-		NumericCode:        "076",
-		Independent:        "Yes",
-		TerritoryName:      "Fernando de Noronha Island, Martim Vaz Islands, Trindade Island",
-		Status:             "Officially assigned",
-	}
-
 	got, err := ExtractDetail(f)
 	assert.NoError(t, err)
-	assert.Equal(t, &expected, got)
+
+	gotBlob, err := json.MarshalIndent(got, "", "  ")
+	assert.NoError(t, err)
+
+	g := goldie.New(t, goldie.WithNameSuffix(".golden.json"))
+	g.Assert(t, "extract_detail", gotBlob)
 }

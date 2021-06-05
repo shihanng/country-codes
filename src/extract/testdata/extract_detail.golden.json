@@ -1,0 +1,264 @@
+{
+  "Alpha2Code": "BR",
+  "ShortName": "BRAZIL",
+  "ShortNameLowerCase": "Brazil",
+  "FullName": "the Federative Republic of Brazil",
+  "Alpha3Code": "BRA",
+  "NumericCode": "076",
+  "Remarks": "",
+  "Independent": "Yes",
+  "TerritoryName": "Fernando de Noronha Island, Martim Vaz Islands, Trindade Island",
+  "Status": "Officially assigned",
+  "Languages": [
+    {
+      "Alpha2": "pt",
+      "Alpha3": "por",
+      "LocalShortName": "Brasil (o)"
+    }
+  ],
+  "Subdivisions": [
+    {
+      "Category": "state",
+      "Code31662": "BR-AC",
+      "Name": "",
+      "LocalVariant": "",
+      "LanguageCode": "",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-AL",
+      "Name": "",
+      "LocalVariant": "",
+      "LanguageCode": "",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-AP",
+      "Name": "",
+      "LocalVariant": "",
+      "LanguageCode": "",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-AM",
+      "Name": "",
+      "LocalVariant": "",
+      "LanguageCode": "",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-BA",
+      "Name": "",
+      "LocalVariant": "",
+      "LanguageCode": "",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-CE",
+      "Name": "",
+      "LocalVariant": "",
+      "LanguageCode": "",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "federal district",
+      "Code31662": "BR-DF",
+      "Name": "",
+      "LocalVariant": "",
+      "LanguageCode": "",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-ES",
+      "Name": "",
+      "LocalVariant": "",
+      "LanguageCode": "",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-GO",
+      "Name": "",
+      "LocalVariant": "",
+      "LanguageCode": "",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-MA",
+      "Name": "",
+      "LocalVariant": "",
+      "LanguageCode": "",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-MT",
+      "Name": "",
+      "LocalVariant": "",
+      "LanguageCode": "",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-MS",
+      "Name": "",
+      "LocalVariant": "",
+      "LanguageCode": "",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-MG",
+      "Name": "",
+      "LocalVariant": "",
+      "LanguageCode": "",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-PR",
+      "Name": "",
+      "LocalVariant": "",
+      "LanguageCode": "",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-PB",
+      "Name": "",
+      "LocalVariant": "",
+      "LanguageCode": "",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-PA",
+      "Name": "",
+      "LocalVariant": "",
+      "LanguageCode": "",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-PE",
+      "Name": "",
+      "LocalVariant": "",
+      "LanguageCode": "",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-PI",
+      "Name": "",
+      "LocalVariant": "",
+      "LanguageCode": "",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-RN",
+      "Name": "",
+      "LocalVariant": "",
+      "LanguageCode": "",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-RS",
+      "Name": "",
+      "LocalVariant": "",
+      "LanguageCode": "",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-RJ",
+      "Name": "",
+      "LocalVariant": "",
+      "LanguageCode": "",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-RO",
+      "Name": "",
+      "LocalVariant": "",
+      "LanguageCode": "",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-RR",
+      "Name": "",
+      "LocalVariant": "",
+      "LanguageCode": "",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-SC",
+      "Name": "",
+      "LocalVariant": "",
+      "LanguageCode": "",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-SE",
+      "Name": "",
+      "LocalVariant": "",
+      "LanguageCode": "",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-SP",
+      "Name": "",
+      "LocalVariant": "",
+      "LanguageCode": "",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-TO",
+      "Name": "",
+      "LocalVariant": "",
+      "LanguageCode": "",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    }
+  ]
+}
