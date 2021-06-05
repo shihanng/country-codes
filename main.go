@@ -9,8 +9,8 @@ import (
 	"github.com/apex/log"
 	"github.com/apex/log/handlers/cli"
 	"github.com/cockroachdb/errors"
-	"github.com/shihanng/country-codes/src/download"
-	"github.com/shihanng/country-codes/src/extract"
+	"github.com/shihanng/country-codes/download"
+	"github.com/shihanng/country-codes/extract"
 )
 
 func main() {
