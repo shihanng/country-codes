@@ -21,8 +21,8 @@ func ExtractAlpha2Code(r io.Reader) ([]Alpha2Code, error) {
 
 	var codes []Alpha2Code
 	doc.Find("tr").Each(func(_ int, s *goquery.Selection) {
-		country := s.Find("button").Text()
-		alpha2Code := s.Find("td:nth-child(3)").Text()
+		country := strings.TrimSpace(s.Find("button").Text())
+		alpha2Code := strings.TrimSpace(s.Find("td:nth-child(3)").Text())
 
 		if country == "" || alpha2Code == "" {
 			return

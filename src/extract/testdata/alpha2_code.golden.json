@@ -1,0 +1,998 @@
+[
+  {
+    "EnglishShortName": "Afghanistan",
+    "Code": "AF"
+  },
+  {
+    "EnglishShortName": "Albania",
+    "Code": "AL"
+  },
+  {
+    "EnglishShortName": "Algeria",
+    "Code": "DZ"
+  },
+  {
+    "EnglishShortName": "American Samoa",
+    "Code": "AS"
+  },
+  {
+    "EnglishShortName": "Andorra",
+    "Code": "AD"
+  },
+  {
+    "EnglishShortName": "Angola",
+    "Code": "AO"
+  },
+  {
+    "EnglishShortName": "Anguilla",
+    "Code": "AI"
+  },
+  {
+    "EnglishShortName": "Antarctica",
+    "Code": "AQ"
+  },
+  {
+    "EnglishShortName": "Antigua and Barbuda",
+    "Code": "AG"
+  },
+  {
+    "EnglishShortName": "Argentina",
+    "Code": "AR"
+  },
+  {
+    "EnglishShortName": "Armenia",
+    "Code": "AM"
+  },
+  {
+    "EnglishShortName": "Aruba",
+    "Code": "AW"
+  },
+  {
+    "EnglishShortName": "Australia",
+    "Code": "AU"
+  },
+  {
+    "EnglishShortName": "Austria",
+    "Code": "AT"
+  },
+  {
+    "EnglishShortName": "Azerbaijan",
+    "Code": "AZ"
+  },
+  {
+    "EnglishShortName": "Bahamas (the)",
+    "Code": "BS"
+  },
+  {
+    "EnglishShortName": "Bahrain",
+    "Code": "BH"
+  },
+  {
+    "EnglishShortName": "Bangladesh",
+    "Code": "BD"
+  },
+  {
+    "EnglishShortName": "Barbados",
+    "Code": "BB"
+  },
+  {
+    "EnglishShortName": "Belarus",
+    "Code": "BY"
+  },
+  {
+    "EnglishShortName": "Belgium",
+    "Code": "BE"
+  },
+  {
+    "EnglishShortName": "Belize",
+    "Code": "BZ"
+  },
+  {
+    "EnglishShortName": "Benin",
+    "Code": "BJ"
+  },
+  {
+    "EnglishShortName": "Bermuda",
+    "Code": "BM"
+  },
+  {
+    "EnglishShortName": "Bhutan",
+    "Code": "BT"
+  },
+  {
+    "EnglishShortName": "Bolivia (Plurinational State of)",
+    "Code": "BO"
+  },
+  {
+    "EnglishShortName": "Bonaire, Sint Eustatius and Saba",
+    "Code": "BQ"
+  },
+  {
+    "EnglishShortName": "Bosnia and Herzegovina",
+    "Code": "BA"
+  },
+  {
+    "EnglishShortName": "Botswana",
+    "Code": "BW"
+  },
+  {
+    "EnglishShortName": "Bouvet Island",
+    "Code": "BV"
+  },
+  {
+    "EnglishShortName": "Brazil",
+    "Code": "BR"
+  },
+  {
+    "EnglishShortName": "British Indian Ocean Territory (the)",
+    "Code": "IO"
+  },
+  {
+    "EnglishShortName": "Brunei Darussalam",
+    "Code": "BN"
+  },
+  {
+    "EnglishShortName": "Bulgaria",
+    "Code": "BG"
+  },
+  {
+    "EnglishShortName": "Burkina Faso",
+    "Code": "BF"
+  },
+  {
+    "EnglishShortName": "Burundi",
+    "Code": "BI"
+  },
+  {
+    "EnglishShortName": "Cabo Verde",
+    "Code": "CV"
+  },
+  {
+    "EnglishShortName": "Cambodia",
+    "Code": "KH"
+  },
+  {
+    "EnglishShortName": "Cameroon",
+    "Code": "CM"
+  },
+  {
+    "EnglishShortName": "Canada",
+    "Code": "CA"
+  },
+  {
+    "EnglishShortName": "Cayman Islands (the)",
+    "Code": "KY"
+  },
+  {
+    "EnglishShortName": "Central African Republic (the)",
+    "Code": "CF"
+  },
+  {
+    "EnglishShortName": "Chad",
+    "Code": "TD"
+  },
+  {
+    "EnglishShortName": "Chile",
+    "Code": "CL"
+  },
+  {
+    "EnglishShortName": "China",
+    "Code": "CN"
+  },
+  {
+    "EnglishShortName": "Christmas Island",
+    "Code": "CX"
+  },
+  {
+    "EnglishShortName": "Cocos (Keeling) Islands (the)",
+    "Code": "CC"
+  },
+  {
+    "EnglishShortName": "Colombia",
+    "Code": "CO"
+  },
+  {
+    "EnglishShortName": "Comoros (the)",
+    "Code": "KM"
+  },
+  {
+    "EnglishShortName": "Congo (the Democratic Republic of the)",
+    "Code": "CD"
+  },
+  {
+    "EnglishShortName": "Congo (the)",
+    "Code": "CG"
+  },
+  {
+    "EnglishShortName": "Cook Islands (the)",
+    "Code": "CK"
+  },
+  {
+    "EnglishShortName": "Costa Rica",
+    "Code": "CR"
+  },
+  {
+    "EnglishShortName": "Croatia",
+    "Code": "HR"
+  },
+  {
+    "EnglishShortName": "Cuba",
+    "Code": "CU"
+  },
+  {
+    "EnglishShortName": "Curaçao",
+    "Code": "CW"
+  },
+  {
+    "EnglishShortName": "Cyprus",
+    "Code": "CY"
+  },
+  {
+    "EnglishShortName": "Czechia",
+    "Code": "CZ"
+  },
+  {
+    "EnglishShortName": "Côte d'Ivoire",
+    "Code": "CI"
+  },
+  {
+    "EnglishShortName": "Denmark",
+    "Code": "DK"
+  },
+  {
+    "EnglishShortName": "Djibouti",
+    "Code": "DJ"
+  },
+  {
+    "EnglishShortName": "Dominica",
+    "Code": "DM"
+  },
+  {
+    "EnglishShortName": "Dominican Republic (the)",
+    "Code": "DO"
+  },
+  {
+    "EnglishShortName": "Ecuador",
+    "Code": "EC"
+  },
+  {
+    "EnglishShortName": "Egypt",
+    "Code": "EG"
+  },
+  {
+    "EnglishShortName": "El Salvador",
+    "Code": "SV"
+  },
+  {
+    "EnglishShortName": "Equatorial Guinea",
+    "Code": "GQ"
+  },
+  {
+    "EnglishShortName": "Eritrea",
+    "Code": "ER"
+  },
+  {
+    "EnglishShortName": "Estonia",
+    "Code": "EE"
+  },
+  {
+    "EnglishShortName": "Eswatini",
+    "Code": "SZ"
+  },
+  {
+    "EnglishShortName": "Ethiopia",
+    "Code": "ET"
+  },
+  {
+    "EnglishShortName": "Falkland Islands (the) [Malvinas]",
+    "Code": "FK"
+  },
+  {
+    "EnglishShortName": "Faroe Islands (the)",
+    "Code": "FO"
+  },
+  {
+    "EnglishShortName": "Fiji",
+    "Code": "FJ"
+  },
+  {
+    "EnglishShortName": "Finland",
+    "Code": "FI"
+  },
+  {
+    "EnglishShortName": "France",
+    "Code": "FR"
+  },
+  {
+    "EnglishShortName": "French Guiana",
+    "Code": "GF"
+  },
+  {
+    "EnglishShortName": "French Polynesia",
+    "Code": "PF"
+  },
+  {
+    "EnglishShortName": "French Southern Territories (the)",
+    "Code": "TF"
+  },
+  {
+    "EnglishShortName": "Gabon",
+    "Code": "GA"
+  },
+  {
+    "EnglishShortName": "Gambia (the)",
+    "Code": "GM"
+  },
+  {
+    "EnglishShortName": "Georgia",
+    "Code": "GE"
+  },
+  {
+    "EnglishShortName": "Germany",
+    "Code": "DE"
+  },
+  {
+    "EnglishShortName": "Ghana",
+    "Code": "GH"
+  },
+  {
+    "EnglishShortName": "Gibraltar",
+    "Code": "GI"
+  },
+  {
+    "EnglishShortName": "Greece",
+    "Code": "GR"
+  },
+  {
+    "EnglishShortName": "Greenland",
+    "Code": "GL"
+  },
+  {
+    "EnglishShortName": "Grenada",
+    "Code": "GD"
+  },
+  {
+    "EnglishShortName": "Guadeloupe",
+    "Code": "GP"
+  },
+  {
+    "EnglishShortName": "Guam",
+    "Code": "GU"
+  },
+  {
+    "EnglishShortName": "Guatemala",
+    "Code": "GT"
+  },
+  {
+    "EnglishShortName": "Guernsey",
+    "Code": "GG"
+  },
+  {
+    "EnglishShortName": "Guinea",
+    "Code": "GN"
+  },
+  {
+    "EnglishShortName": "Guinea-Bissau",
+    "Code": "GW"
+  },
+  {
+    "EnglishShortName": "Guyana",
+    "Code": "GY"
+  },
+  {
+    "EnglishShortName": "Haiti",
+    "Code": "HT"
+  },
+  {
+    "EnglishShortName": "Heard Island and McDonald Islands",
+    "Code": "HM"
+  },
+  {
+    "EnglishShortName": "Holy See (the)",
+    "Code": "VA"
+  },
+  {
+    "EnglishShortName": "Honduras",
+    "Code": "HN"
+  },
+  {
+    "EnglishShortName": "Hong Kong",
+    "Code": "HK"
+  },
+  {
+    "EnglishShortName": "Hungary",
+    "Code": "HU"
+  },
+  {
+    "EnglishShortName": "Iceland",
+    "Code": "IS"
+  },
+  {
+    "EnglishShortName": "India",
+    "Code": "IN"
+  },
+  {
+    "EnglishShortName": "Indonesia",
+    "Code": "ID"
+  },
+  {
+    "EnglishShortName": "Iran (Islamic Republic of)",
+    "Code": "IR"
+  },
+  {
+    "EnglishShortName": "Iraq",
+    "Code": "IQ"
+  },
+  {
+    "EnglishShortName": "Ireland",
+    "Code": "IE"
+  },
+  {
+    "EnglishShortName": "Isle of Man",
+    "Code": "IM"
+  },
+  {
+    "EnglishShortName": "Israel",
+    "Code": "IL"
+  },
+  {
+    "EnglishShortName": "Italy",
+    "Code": "IT"
+  },
+  {
+    "EnglishShortName": "Jamaica",
+    "Code": "JM"
+  },
+  {
+    "EnglishShortName": "Japan",
+    "Code": "JP"
+  },
+  {
+    "EnglishShortName": "Jersey",
+    "Code": "JE"
+  },
+  {
+    "EnglishShortName": "Jordan",
+    "Code": "JO"
+  },
+  {
+    "EnglishShortName": "Kazakhstan",
+    "Code": "KZ"
+  },
+  {
+    "EnglishShortName": "Kenya",
+    "Code": "KE"
+  },
+  {
+    "EnglishShortName": "Kiribati",
+    "Code": "KI"
+  },
+  {
+    "EnglishShortName": "Korea (the Democratic People's Republic of)",
+    "Code": "KP"
+  },
+  {
+    "EnglishShortName": "Korea (the Republic of)",
+    "Code": "KR"
+  },
+  {
+    "EnglishShortName": "Kuwait",
+    "Code": "KW"
+  },
+  {
+    "EnglishShortName": "Kyrgyzstan",
+    "Code": "KG"
+  },
+  {
+    "EnglishShortName": "Lao People's Democratic Republic (the)",
+    "Code": "LA"
+  },
+  {
+    "EnglishShortName": "Latvia",
+    "Code": "LV"
+  },
+  {
+    "EnglishShortName": "Lebanon",
+    "Code": "LB"
+  },
+  {
+    "EnglishShortName": "Lesotho",
+    "Code": "LS"
+  },
+  {
+    "EnglishShortName": "Liberia",
+    "Code": "LR"
+  },
+  {
+    "EnglishShortName": "Libya",
+    "Code": "LY"
+  },
+  {
+    "EnglishShortName": "Liechtenstein",
+    "Code": "LI"
+  },
+  {
+    "EnglishShortName": "Lithuania",
+    "Code": "LT"
+  },
+  {
+    "EnglishShortName": "Luxembourg",
+    "Code": "LU"
+  },
+  {
+    "EnglishShortName": "Macao",
+    "Code": "MO"
+  },
+  {
+    "EnglishShortName": "Madagascar",
+    "Code": "MG"
+  },
+  {
+    "EnglishShortName": "Malawi",
+    "Code": "MW"
+  },
+  {
+    "EnglishShortName": "Malaysia",
+    "Code": "MY"
+  },
+  {
+    "EnglishShortName": "Maldives",
+    "Code": "MV"
+  },
+  {
+    "EnglishShortName": "Mali",
+    "Code": "ML"
+  },
+  {
+    "EnglishShortName": "Malta",
+    "Code": "MT"
+  },
+  {
+    "EnglishShortName": "Marshall Islands (the)",
+    "Code": "MH"
+  },
+  {
+    "EnglishShortName": "Martinique",
+    "Code": "MQ"
+  },
+  {
+    "EnglishShortName": "Mauritania",
+    "Code": "MR"
+  },
+  {
+    "EnglishShortName": "Mauritius",
+    "Code": "MU"
+  },
+  {
+    "EnglishShortName": "Mayotte",
+    "Code": "YT"
+  },
+  {
+    "EnglishShortName": "Mexico",
+    "Code": "MX"
+  },
+  {
+    "EnglishShortName": "Micronesia (Federated States of)",
+    "Code": "FM"
+  },
+  {
+    "EnglishShortName": "Moldova (the Republic of)",
+    "Code": "MD"
+  },
+  {
+    "EnglishShortName": "Monaco",
+    "Code": "MC"
+  },
+  {
+    "EnglishShortName": "Mongolia",
+    "Code": "MN"
+  },
+  {
+    "EnglishShortName": "Montenegro",
+    "Code": "ME"
+  },
+  {
+    "EnglishShortName": "Montserrat",
+    "Code": "MS"
+  },
+  {
+    "EnglishShortName": "Morocco",
+    "Code": "MA"
+  },
+  {
+    "EnglishShortName": "Mozambique",
+    "Code": "MZ"
+  },
+  {
+    "EnglishShortName": "Myanmar",
+    "Code": "MM"
+  },
+  {
+    "EnglishShortName": "Namibia",
+    "Code": "NA"
+  },
+  {
+    "EnglishShortName": "Nauru",
+    "Code": "NR"
+  },
+  {
+    "EnglishShortName": "Nepal",
+    "Code": "NP"
+  },
+  {
+    "EnglishShortName": "Netherlands (the)",
+    "Code": "NL"
+  },
+  {
+    "EnglishShortName": "New Caledonia",
+    "Code": "NC"
+  },
+  {
+    "EnglishShortName": "New Zealand",
+    "Code": "NZ"
+  },
+  {
+    "EnglishShortName": "Nicaragua",
+    "Code": "NI"
+  },
+  {
+    "EnglishShortName": "Niger (the)",
+    "Code": "NE"
+  },
+  {
+    "EnglishShortName": "Nigeria",
+    "Code": "NG"
+  },
+  {
+    "EnglishShortName": "Niue",
+    "Code": "NU"
+  },
+  {
+    "EnglishShortName": "Norfolk Island",
+    "Code": "NF"
+  },
+  {
+    "EnglishShortName": "North Macedonia",
+    "Code": "MK"
+  },
+  {
+    "EnglishShortName": "Northern Mariana Islands (the)",
+    "Code": "MP"
+  },
+  {
+    "EnglishShortName": "Norway",
+    "Code": "NO"
+  },
+  {
+    "EnglishShortName": "Oman",
+    "Code": "OM"
+  },
+  {
+    "EnglishShortName": "Pakistan",
+    "Code": "PK"
+  },
+  {
+    "EnglishShortName": "Palau",
+    "Code": "PW"
+  },
+  {
+    "EnglishShortName": "Palestine, State of",
+    "Code": "PS"
+  },
+  {
+    "EnglishShortName": "Panama",
+    "Code": "PA"
+  },
+  {
+    "EnglishShortName": "Papua New Guinea",
+    "Code": "PG"
+  },
+  {
+    "EnglishShortName": "Paraguay",
+    "Code": "PY"
+  },
+  {
+    "EnglishShortName": "Peru",
+    "Code": "PE"
+  },
+  {
+    "EnglishShortName": "Philippines (the)",
+    "Code": "PH"
+  },
+  {
+    "EnglishShortName": "Pitcairn",
+    "Code": "PN"
+  },
+  {
+    "EnglishShortName": "Poland",
+    "Code": "PL"
+  },
+  {
+    "EnglishShortName": "Portugal",
+    "Code": "PT"
+  },
+  {
+    "EnglishShortName": "Puerto Rico",
+    "Code": "PR"
+  },
+  {
+    "EnglishShortName": "Qatar",
+    "Code": "QA"
+  },
+  {
+    "EnglishShortName": "Romania",
+    "Code": "RO"
+  },
+  {
+    "EnglishShortName": "Russian Federation (the)",
+    "Code": "RU"
+  },
+  {
+    "EnglishShortName": "Rwanda",
+    "Code": "RW"
+  },
+  {
+    "EnglishShortName": "Réunion",
+    "Code": "RE"
+  },
+  {
+    "EnglishShortName": "Saint Barthélemy",
+    "Code": "BL"
+  },
+  {
+    "EnglishShortName": "Saint Helena, Ascension and Tristan da Cunha",
+    "Code": "SH"
+  },
+  {
+    "EnglishShortName": "Saint Kitts and Nevis",
+    "Code": "KN"
+  },
+  {
+    "EnglishShortName": "Saint Lucia",
+    "Code": "LC"
+  },
+  {
+    "EnglishShortName": "Saint Martin (French part)",
+    "Code": "MF"
+  },
+  {
+    "EnglishShortName": "Saint Pierre and Miquelon",
+    "Code": "PM"
+  },
+  {
+    "EnglishShortName": "Saint Vincent and the Grenadines",
+    "Code": "VC"
+  },
+  {
+    "EnglishShortName": "Samoa",
+    "Code": "WS"
+  },
+  {
+    "EnglishShortName": "San Marino",
+    "Code": "SM"
+  },
+  {
+    "EnglishShortName": "Sao Tome and Principe",
+    "Code": "ST"
+  },
+  {
+    "EnglishShortName": "Saudi Arabia",
+    "Code": "SA"
+  },
+  {
+    "EnglishShortName": "Senegal",
+    "Code": "SN"
+  },
+  {
+    "EnglishShortName": "Serbia",
+    "Code": "RS"
+  },
+  {
+    "EnglishShortName": "Seychelles",
+    "Code": "SC"
+  },
+  {
+    "EnglishShortName": "Sierra Leone",
+    "Code": "SL"
+  },
+  {
+    "EnglishShortName": "Singapore",
+    "Code": "SG"
+  },
+  {
+    "EnglishShortName": "Sint Maarten (Dutch part)",
+    "Code": "SX"
+  },
+  {
+    "EnglishShortName": "Slovakia",
+    "Code": "SK"
+  },
+  {
+    "EnglishShortName": "Slovenia",
+    "Code": "SI"
+  },
+  {
+    "EnglishShortName": "Solomon Islands",
+    "Code": "SB"
+  },
+  {
+    "EnglishShortName": "Somalia",
+    "Code": "SO"
+  },
+  {
+    "EnglishShortName": "South Africa",
+    "Code": "ZA"
+  },
+  {
+    "EnglishShortName": "South Georgia and the South Sandwich Islands",
+    "Code": "GS"
+  },
+  {
+    "EnglishShortName": "South Sudan",
+    "Code": "SS"
+  },
+  {
+    "EnglishShortName": "Spain",
+    "Code": "ES"
+  },
+  {
+    "EnglishShortName": "Sri Lanka",
+    "Code": "LK"
+  },
+  {
+    "EnglishShortName": "Sudan (the)",
+    "Code": "SD"
+  },
+  {
+    "EnglishShortName": "Suriname",
+    "Code": "SR"
+  },
+  {
+    "EnglishShortName": "Svalbard and Jan Mayen",
+    "Code": "SJ"
+  },
+  {
+    "EnglishShortName": "Sweden",
+    "Code": "SE"
+  },
+  {
+    "EnglishShortName": "Switzerland",
+    "Code": "CH"
+  },
+  {
+    "EnglishShortName": "Syrian Arab Republic (the)",
+    "Code": "SY"
+  },
+  {
+    "EnglishShortName": "Taiwan (Province of China)",
+    "Code": "TW"
+  },
+  {
+    "EnglishShortName": "Tajikistan",
+    "Code": "TJ"
+  },
+  {
+    "EnglishShortName": "Tanzania, the United Republic of",
+    "Code": "TZ"
+  },
+  {
+    "EnglishShortName": "Thailand",
+    "Code": "TH"
+  },
+  {
+    "EnglishShortName": "Timor-Leste",
+    "Code": "TL"
+  },
+  {
+    "EnglishShortName": "Togo",
+    "Code": "TG"
+  },
+  {
+    "EnglishShortName": "Tokelau",
+    "Code": "TK"
+  },
+  {
+    "EnglishShortName": "Tonga",
+    "Code": "TO"
+  },
+  {
+    "EnglishShortName": "Trinidad and Tobago",
+    "Code": "TT"
+  },
+  {
+    "EnglishShortName": "Tunisia",
+    "Code": "TN"
+  },
+  {
+    "EnglishShortName": "Turkey",
+    "Code": "TR"
+  },
+  {
+    "EnglishShortName": "Turkmenistan",
+    "Code": "TM"
+  },
+  {
+    "EnglishShortName": "Turks and Caicos Islands (the)",
+    "Code": "TC"
+  },
+  {
+    "EnglishShortName": "Tuvalu",
+    "Code": "TV"
+  },
+  {
+    "EnglishShortName": "Uganda",
+    "Code": "UG"
+  },
+  {
+    "EnglishShortName": "Ukraine",
+    "Code": "UA"
+  },
+  {
+    "EnglishShortName": "United Arab Emirates (the)",
+    "Code": "AE"
+  },
+  {
+    "EnglishShortName": "United Kingdom of Great Britain and Northern Ireland (the)",
+    "Code": "GB"
+  },
+  {
+    "EnglishShortName": "United States Minor Outlying Islands (the)",
+    "Code": "UM"
+  },
+  {
+    "EnglishShortName": "United States of America (the)",
+    "Code": "US"
+  },
+  {
+    "EnglishShortName": "Uruguay",
+    "Code": "UY"
+  },
+  {
+    "EnglishShortName": "Uzbekistan",
+    "Code": "UZ"
+  },
+  {
+    "EnglishShortName": "Vanuatu",
+    "Code": "VU"
+  },
+  {
+    "EnglishShortName": "Venezuela (Bolivarian Republic of)",
+    "Code": "VE"
+  },
+  {
+    "EnglishShortName": "Viet Nam",
+    "Code": "VN"
+  },
+  {
+    "EnglishShortName": "Virgin Islands (British)",
+    "Code": "VG"
+  },
+  {
+    "EnglishShortName": "Virgin Islands (U.S.)",
+    "Code": "VI"
+  },
+  {
+    "EnglishShortName": "Wallis and Futuna",
+    "Code": "WF"
+  },
+  {
+    "EnglishShortName": "Western Sahara*",
+    "Code": "EH"
+  },
+  {
+    "EnglishShortName": "Yemen",
+    "Code": "YE"
+  },
+  {
+    "EnglishShortName": "Zambia",
+    "Code": "ZM"
+  },
+  {
+    "EnglishShortName": "Zimbabwe",
+    "Code": "ZW"
+  },
+  {
+    "EnglishShortName": "Åland Islands",
+    "Code": "AX"
+  }
+]
