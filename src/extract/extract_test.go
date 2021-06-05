@@ -16,8 +16,15 @@ func TestExtractDetail(t *testing.T) {
 	defer f.Close()
 
 	expected := Detail{
-		Alpha2Code: "BR",
-		ShortName:  "BRAZIL",
+		Alpha2Code:         "BR",
+		ShortName:          "BRAZIL",
+		ShortNameLowerCase: "Brazil",
+		FullName:           "the Federative Republic of Brazil",
+		Alpha3Code:         "BRA",
+		NumericCode:        "076",
+		Independent:        "Yes",
+		TerritoryName:      "Fernando de Noronha Island, Martim Vaz Islands, Trindade Island",
+		Status:             "Officially assigned",
 	}
 
 	got, err := ExtractDetail(f)
