@@ -100,6 +100,11 @@ func ExtractDetail(r io.Reader) (*Detail, error) {
 		var sub Subdivision
 		sub.Category = strings.TrimSpace(s.Find("#subdivision > tbody > tr > td:nth-child(1)").Text())
 		sub.Code31662 = strings.TrimSpace(s.Find("#subdivision > tbody > tr > td:nth-child(2)").Text())
+		sub.Name = strings.TrimSpace(s.Find("#subdivision > tbody > tr > td:nth-child(3)").Text())
+		sub.LocalVariant = strings.TrimSpace(s.Find("#subdivision > tbody > tr > td:nth-child(4)").Text())
+		sub.LanguageCode = strings.TrimSpace(s.Find("#subdivision > tbody > tr > td:nth-child(5)").Text())
+		sub.RomanizationSystem = strings.TrimSpace(s.Find("#subdivision > tbody > tr > td:nth-child(6)").Text())
+		sub.ParentSubdivision = strings.TrimSpace(s.Find("#subdivision > tbody > tr > td:nth-child(7)").Text())
 
 		detail.Subdivisions = append(detail.Subdivisions, sub)
 	})
