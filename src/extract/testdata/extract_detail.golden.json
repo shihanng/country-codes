@@ -1,0 +1,264 @@
+{
+  "Alpha2Code": "BR",
+  "ShortName": "BRAZIL",
+  "ShortNameLowerCase": "Brazil",
+  "FullName": "the Federative Republic of Brazil",
+  "Alpha3Code": "BRA",
+  "NumericCode": "076",
+  "Remarks": "",
+  "Independent": "Yes",
+  "TerritoryName": "Fernando de Noronha Island, Martim Vaz Islands, Trindade Island",
+  "Status": "Officially assigned",
+  "Languages": [
+    {
+      "Alpha2": "pt",
+      "Alpha3": "por",
+      "LocalShortName": "Brasil (o)"
+    }
+  ],
+  "Subdivisions": [
+    {
+      "Category": "state",
+      "Code31662": "BR-AC",
+      "Name": "Acre",
+      "LocalVariant": "",
+      "LanguageCode": "pt",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-AL",
+      "Name": "Alagoas",
+      "LocalVariant": "",
+      "LanguageCode": "pt",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-AP",
+      "Name": "Amapá",
+      "LocalVariant": "",
+      "LanguageCode": "pt",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-AM",
+      "Name": "Amazonas",
+      "LocalVariant": "",
+      "LanguageCode": "pt",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-BA",
+      "Name": "Bahia",
+      "LocalVariant": "",
+      "LanguageCode": "pt",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-CE",
+      "Name": "Ceará",
+      "LocalVariant": "",
+      "LanguageCode": "pt",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "federal district",
+      "Code31662": "BR-DF",
+      "Name": "Distrito Federal",
+      "LocalVariant": "",
+      "LanguageCode": "pt",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-ES",
+      "Name": "Espírito Santo",
+      "LocalVariant": "",
+      "LanguageCode": "pt",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-GO",
+      "Name": "Goiás",
+      "LocalVariant": "",
+      "LanguageCode": "pt",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-MA",
+      "Name": "Maranhão",
+      "LocalVariant": "",
+      "LanguageCode": "pt",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-MT",
+      "Name": "Mato Grosso",
+      "LocalVariant": "",
+      "LanguageCode": "pt",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-MS",
+      "Name": "Mato Grosso do Sul",
+      "LocalVariant": "",
+      "LanguageCode": "pt",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-MG",
+      "Name": "Minas Gerais",
+      "LocalVariant": "",
+      "LanguageCode": "pt",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-PR",
+      "Name": "Paraná",
+      "LocalVariant": "",
+      "LanguageCode": "pt",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-PB",
+      "Name": "Paraíba",
+      "LocalVariant": "",
+      "LanguageCode": "pt",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-PA",
+      "Name": "Pará",
+      "LocalVariant": "",
+      "LanguageCode": "pt",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-PE",
+      "Name": "Pernambuco",
+      "LocalVariant": "",
+      "LanguageCode": "pt",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-PI",
+      "Name": "Piauí",
+      "LocalVariant": "",
+      "LanguageCode": "pt",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-RN",
+      "Name": "Rio Grande do Norte",
+      "LocalVariant": "",
+      "LanguageCode": "pt",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-RS",
+      "Name": "Rio Grande do Sul",
+      "LocalVariant": "",
+      "LanguageCode": "pt",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-RJ",
+      "Name": "Rio de Janeiro",
+      "LocalVariant": "",
+      "LanguageCode": "pt",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-RO",
+      "Name": "Rondônia",
+      "LocalVariant": "",
+      "LanguageCode": "pt",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-RR",
+      "Name": "Roraima",
+      "LocalVariant": "",
+      "LanguageCode": "pt",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-SC",
+      "Name": "Santa Catarina",
+      "LocalVariant": "",
+      "LanguageCode": "pt",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-SE",
+      "Name": "Sergipe",
+      "LocalVariant": "",
+      "LanguageCode": "pt",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-SP",
+      "Name": "São Paulo",
+      "LocalVariant": "",
+      "LanguageCode": "pt",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    },
+    {
+      "Category": "state",
+      "Code31662": "BR-TO",
+      "Name": "Tocantins",
+      "LocalVariant": "",
+      "LanguageCode": "pt",
+      "RomanizationSystem": "",
+      "ParentSubdivision": ""
+    }
+  ]
+}
