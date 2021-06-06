@@ -9,7 +9,7 @@ require (
 	github.com/chromedp/chromedp v0.7.3-0.20210517095211-f50e6240fa87
 	github.com/cockroachdb/errors v1.8.4
 	github.com/cockroachdb/redact v1.0.9 // indirect
-	github.com/golang-migrate/migrate/v4 v4.14.1
+	github.com/golang-migrate/migrate/v4 v4.14.0
 	github.com/jmoiron/sqlx v1.3.4
 	github.com/kr/pretty v0.2.1 // indirect
 	github.com/kr/text v0.2.0 // indirect
