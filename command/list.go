@@ -1,6 +1,7 @@
 package command
 
 import (
+	"bytes"
 	"context"
 	"flag"
 	"fmt"
@@ -15,21 +16,23 @@ import (
 type listCommand struct {
 	logger log.Logger
 	table  *db.CountryTable
+	fs     *flag.FlagSet
+	buf    *bytes.Buffer
+
+	flagCSV *bool
 }
 
 func (c *listCommand) Help() string {
+	c.fs.PrintDefaults()
+
 	return `
 Download list of countries with Alpha-2 code and English short name
 from https://www.iso.org/obp/ui#search into local DB.
-`
+` + "\n" + c.buf.String()
 }
 
 func (c *listCommand) Run(args []string) int {
-	fs := flag.NewFlagSet("", flag.ExitOnError)
-
-	csvOut := fs.Bool("csv", false, "display colorized output")
-
-	if err := fs.Parse(args); err != nil {
+	if err := c.fs.Parse(args); err != nil {
 		c.logger.WithError(err).Error("failed to parse flag")
 	}
 
@@ -54,7 +57,7 @@ func (c *listCommand) Run(args []string) int {
 	c.logger.Info("done extracting Alpha-2 codes")
 
 	for _, code := range codes {
-		if *csvOut {
+		if *c.flagCSV {
 			fmt.Printf("%s,%s\n", code.Code, code.EnglishShortName)
 		}
 
