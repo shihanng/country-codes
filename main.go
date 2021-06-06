@@ -43,6 +43,7 @@ func main() {
 	}
 
 	debug := fs.Bool("debug", false, "show debug log")
+	version := fs.Bool("version", false, "print version")
 
 	if err := fs.Parse(os.Args[1:]); err != nil {
 		os.Exit(1)
@@ -50,6 +51,11 @@ func main() {
 
 	if *debug {
 		logger.Level = log.DebugLevel
+	}
+
+	if *version {
+		fmt.Println(c.Version)
+		os.Exit(0)
 	}
 
 	dbInstance, err := db.NewDB(ctx, dbPath)
