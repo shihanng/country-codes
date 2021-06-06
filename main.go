@@ -4,6 +4,7 @@ import (
 	"context"
 	"errors"
 	"flag"
+	"fmt"
 	"os"
 
 	"github.com/apex/log"
@@ -20,20 +21,35 @@ func main() {
 	ctx := context.Background()
 
 	fs := flag.NewFlagSet("", flag.ExitOnError)
+
+	logger := log.Logger{
+		Level:   log.ErrorLevel,
+		Handler: apexcli.New(os.Stderr),
+	}
+
+	factory := command.Factory{
+		Logger: logger,
+	}
+
+	c := cli.NewCLI("country-codes", "0.0.0")
+
+	c.Commands = map[string]cli.CommandFactory{
+		"update list": factory.ListCommand,
+	}
+
+	fs.Usage = func() {
+		fmt.Println(c.HelpFunc(c.Commands))
+		fs.PrintDefaults()
+	}
+
 	debug := fs.Bool("debug", false, "show debug log")
 
 	if err := fs.Parse(os.Args[1:]); err != nil {
 		os.Exit(1)
 	}
 
-	logLevel := log.ErrorLevel
 	if *debug {
-		logLevel = log.DebugLevel
-	}
-
-	logger := log.Logger{
-		Level:   logLevel,
-		Handler: apexcli.New(os.Stderr),
+		logger.Level = log.DebugLevel
 	}
 
 	dbInstance, err := db.NewDB(ctx, dbPath)
@@ -46,20 +62,11 @@ func main() {
 		}
 	}
 
-	countryTable := db.NewCountryTable(dbInstance)
+	factory.CountryTable = db.NewCountryTable(dbInstance)
 
 	logger.Info("done preparing db")
 
-	factory := command.Factory{
-		Logger:       logger,
-		CountryTable: countryTable,
-	}
-
-	c := cli.NewCLI("country-codes", "0.0.0")
 	c.Args = fs.Args()
-	c.Commands = map[string]cli.CommandFactory{
-		"update list": factory.ListCommand,
-	}
 
 	exitStatus, err := c.Run()
 	if err != nil {
