@@ -61,6 +61,16 @@ func (s *CountryTableSuite) TestCountryTable_UpsertCountry() {
 	}
 }
 
+func (s *CountryTableSuite) TestCountryTable_UpsertCountry_Upsert() {
+	ctx := context.Background()
+	s.NoError(s.countryTable.UpsertCountry(ctx, "MY", ""))
+	s.NoError(s.countryTable.UpsertCountry(ctx, "MY", "Malaysia"))
+
+	actual, err := s.countryTable.getCountryEnglishShortName(ctx, "MY")
+	s.NoError(err)
+	s.Equal("Malaysia", actual)
+}
+
 func TestCountryTableSuite(t *testing.T) {
 	suite.Run(t, &CountryTableSuite{})
 }

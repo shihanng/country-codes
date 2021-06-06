@@ -30,3 +30,23 @@ ON CONFLICT (alpha_2_code)
 
 	return nil
 }
+
+func (c *CountryTable) getCountryEnglishShortName(ctx context.Context, alpha2Code string) (string, error) {
+	var englishShortName string
+
+	err := c.db.QueryRowxContext(ctx, `
+SELECT
+    english_sort_name
+FROM
+    countries
+WHERE
+    alpha_2_code = ?
+;
+    `, alpha2Code).Scan(&englishShortName)
+
+	if err != nil {
+		return "", errors.Wrap(err, "db: get english_sort_name")
+	}
+
+	return englishShortName, nil
+}
