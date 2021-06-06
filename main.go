@@ -4,14 +4,13 @@ import (
 	"context"
 	"errors"
 	"os"
-	"strings"
 
 	"github.com/apex/log"
-	"github.com/apex/log/handlers/cli"
+	apexcli "github.com/apex/log/handlers/cli"
 	"github.com/golang-migrate/migrate/v4"
+	"github.com/mitchellh/cli"
+	"github.com/shihanng/country-codes/command"
 	"github.com/shihanng/country-codes/db"
-	"github.com/shihanng/country-codes/download"
-	"github.com/shihanng/country-codes/extract"
 )
 
 const dbPath = "country_code.db"
@@ -21,7 +20,7 @@ func main() {
 
 	logger := log.Logger{
 		Level:   log.InfoLevel,
-		Handler: cli.New(os.Stderr),
+		Handler: apexcli.New(os.Stderr),
 	}
 
 	dbInstance, err := db.NewDB(ctx, dbPath)
@@ -38,28 +37,21 @@ func main() {
 
 	logger.Info("done preparing db")
 
-	listHTML, err := download.DownloadCountryListHTML(ctx, download.URL)
+	factory := command.Factory{
+		Logger:       logger,
+		CountryTable: countryTable,
+	}
+
+	c := cli.NewCLI("country-codes", "0.0.0")
+	c.Args = os.Args[1:]
+	c.Commands = map[string]cli.CommandFactory{
+		"update list": factory.ListCommand,
+	}
+
+	exitStatus, err := c.Run()
 	if err != nil {
-		logger.WithError(err).Error("failed to download main list of countries")
-		return
+		logger.WithError(err).Error("failed running command")
 	}
 
-	logger.Info("done downloading html")
-
-	r := strings.NewReader(listHTML)
-
-	codes, err := extract.ExtractAlpha2Code(r)
-	if err != nil {
-		logger.WithError(err).Error("failed to extract Alpha-2 codes")
-		return
-	}
-
-	logger.Info("done extracting Alpha-2 codes")
-
-	for _, code := range codes {
-		if err := countryTable.UpsertCountry(ctx, code.Code, code.EnglishShortName); err != nil {
-			logger.WithError(err).Error("failed to register country to db")
-			return
-		}
-	}
+	os.Exit(exitStatus)
 }
