@@ -1,6 +1,8 @@
 package db
 
 import (
+	"context"
+
 	"github.com/cockroachdb/errors"
 	"github.com/jmoiron/sqlx"
 )
@@ -13,8 +15,8 @@ func NewCountryTable(db *sqlx.DB) *CountryTable {
 	return &CountryTable{db: db}
 }
 
-func (c *CountryTable) UpsertCountry(alpha2Code, englishShortName string) error {
-	_, err := c.db.Exec(`
+func (c *CountryTable) UpsertCountry(ctx context.Context, alpha2Code, englishShortName string) error {
+	_, err := c.db.ExecContext(ctx, `
 INSERT INTO countries (alpha_2_code, english_sort_name)
     VALUES (?, ?)
 ON CONFLICT (alpha_2_code)

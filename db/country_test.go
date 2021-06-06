@@ -1,6 +1,7 @@
 package db
 
 import (
+	"context"
 	"testing"
 
 	"github.com/jmoiron/sqlx"
@@ -15,7 +16,7 @@ type CountryTableSuite struct {
 }
 
 func (s *CountryTableSuite) SetupSuite() {
-	db, err := NewDB(Memory)
+	db, err := NewDB(context.Background(), Memory)
 	s.Require().NoError(err)
 	s.db = db
 	s.countryTable = NewCountryTable(s.db)
@@ -51,7 +52,10 @@ func (s *CountryTableSuite) TestCountryTable_UpsertCountry() {
 
 	for _, tt := range tests {
 		s.T().Run(tt.name, func(t *testing.T) {
-			err := s.countryTable.UpsertCountry(tt.args.alpha2Code, tt.args.englishShortName)
+			err := s.countryTable.UpsertCountry(
+				context.Background(),
+				tt.args.alpha2Code,
+				tt.args.englishShortName)
 			tt.assertion(t, err)
 		})
 	}
