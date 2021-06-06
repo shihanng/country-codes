@@ -25,6 +25,6 @@ func (f *Factory) ListCommand() (cli.Command, error) {
 		table:   f.CountryTable,
 		fs:      fs,
 		buf:     &b,
-		flagCSV: fs.Bool("csv", false, "print to screen in comma sep:rated value"),
+		flagCSV: fs.Bool("csv", false, "print to screen in comma separated value"),
 	}, nil
 }
