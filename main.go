@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"errors"
+	"flag"
 	"os"
 
 	"github.com/apex/log"
@@ -18,8 +19,20 @@ const dbPath = "country_code.db"
 func main() {
 	ctx := context.Background()
 
+	fs := flag.NewFlagSet("", flag.ExitOnError)
+	debug := fs.Bool("debug", false, "show debug log")
+
+	if err := fs.Parse(os.Args[1:]); err != nil {
+		os.Exit(1)
+	}
+
+	logLevel := log.ErrorLevel
+	if *debug {
+		logLevel = log.DebugLevel
+	}
+
 	logger := log.Logger{
-		Level:   log.InfoLevel,
+		Level:   logLevel,
 		Handler: apexcli.New(os.Stderr),
 	}
 
@@ -43,7 +56,7 @@ func main() {
 	}
 
 	c := cli.NewCLI("country-codes", "0.0.0")
-	c.Args = os.Args[1:]
+	c.Args = fs.Args()
 	c.Commands = map[string]cli.CommandFactory{
 		"update list": factory.ListCommand,
 	}
