@@ -2,6 +2,8 @@ package command
 
 import (
 	"context"
+	"flag"
+	"fmt"
 	"strings"
 
 	"github.com/apex/log"
@@ -22,7 +24,15 @@ from https://www.iso.org/obp/ui#search into local DB.
 `
 }
 
-func (c *listCommand) Run(_ []string) int {
+func (c *listCommand) Run(args []string) int {
+	fs := flag.NewFlagSet("", flag.ExitOnError)
+
+	csvOut := fs.Bool("csv", false, "display colorized output")
+
+	if err := fs.Parse(args); err != nil {
+		c.logger.WithError(err).Error("failed to parse flag")
+	}
+
 	ctx := context.Background()
 
 	listHTML, err := download.DownloadCountryListHTML(ctx, download.URL)
@@ -44,6 +54,10 @@ func (c *listCommand) Run(_ []string) int {
 	c.logger.Info("done extracting Alpha-2 codes")
 
 	for _, code := range codes {
+		if *csvOut {
+			fmt.Printf("%s,%s\n", code.Code, code.EnglishShortName)
+		}
+
 		if err := c.table.UpsertCountry(ctx, code.Code, code.EnglishShortName); err != nil {
 			c.logger.WithError(err).Error("failed to register country to db")
 			return 1
