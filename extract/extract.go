@@ -52,6 +52,11 @@ type Detail struct {
 	Subdivisions       []Subdivision
 }
 
+type Language struct {
+	Alpha2 string `db:"alpha_2_code"`
+	Alpha3 string `db:"alpha_3_code"`
+}
+
 type AdministrativeLanguage struct {
 	Alpha2         string
 	Alpha3         string
