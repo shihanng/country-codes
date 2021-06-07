@@ -57,6 +57,8 @@ func (c *listCommand) Run(args []string) int {
 	c.logger.Info("done extracting Alpha-2 codes")
 
 	for _, code := range codes {
+		code.Code = strings.ToUpper(code.Code)
+
 		if *c.flagCSV {
 			fmt.Printf("%s,%s\n", code.Code, code.EnglishShortName)
 		}
