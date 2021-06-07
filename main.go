@@ -35,6 +35,7 @@ func main() {
 
 	c.Commands = map[string]cli.CommandFactory{
 		"update list": factory.ListCommand,
+		"update detail": factory.DetailCommand,
 	}
 
 	fs.Usage = func() {
@@ -69,6 +70,7 @@ func main() {
 	}
 
 	factory.CountryTable = db.NewCountryTable(dbInstance)
+	factory.LanguageTable = db.NewLanguageTable(dbInstance)
 
 	logger.Info("done preparing db")
 
