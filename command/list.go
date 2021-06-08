@@ -14,7 +14,7 @@ import (
 )
 
 type listCommand struct {
-	logger log.Logger
+	logger *log.Logger
 	table  *db.CountryTable
 	fs     *flag.FlagSet
 	buf    *bytes.Buffer

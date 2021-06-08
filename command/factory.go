@@ -10,7 +10,7 @@ import (
 )
 
 type Factory struct {
-	Logger        log.Logger
+	Logger        *log.Logger
 	CountryTable  *db.CountryTable
 	LanguageTable *db.LanguageTable
 }

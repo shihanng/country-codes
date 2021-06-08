@@ -34,6 +34,20 @@ INSERT INTO languages (
 	return nil
 }
 
+func (t *LanguageTable) SetLocalShortName(ctx context.Context, countryCode, languageCode, localShortName string) error {
+	_, err := t.db.ExecContext(ctx, `
+INSERT INTO country_languages (
+      country_code
+    , language_code
+    , local_short_name
+) VALUES (?, ?, ?) 
+ON CONFLICT (country_code, language_code) DO UPDATE SET
+      local_short_name = excluded.local_short_name
+;`, countryCode, languageCode, localShortName)
+
+	return errors.Wrap(err, "db: upsert languages of country")
+}
+
 func (t *LanguageTable) getLanguage(ctx context.Context, alpha2Code string) (*extract.Language, error) {
 	var lang extract.Language
 

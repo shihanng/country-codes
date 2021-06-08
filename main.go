@@ -15,7 +15,7 @@ import (
 	"github.com/shihanng/country-codes/db"
 )
 
-const dbPath = "country_code.db"
+const dbPath = "country_code.db?_foreign_keys=1"
 
 func main() {
 	ctx := context.Background()
@@ -28,13 +28,13 @@ func main() {
 	}
 
 	factory := command.Factory{
-		Logger: logger,
+		Logger: &logger,
 	}
 
 	c := cli.NewCLI("country-codes", "0.0.0")
 
 	c.Commands = map[string]cli.CommandFactory{
-		"update list": factory.ListCommand,
+		"update list":   factory.ListCommand,
 		"update detail": factory.DetailCommand,
 	}
 
