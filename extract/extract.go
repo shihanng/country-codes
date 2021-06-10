@@ -64,13 +64,14 @@ type AdministrativeLanguage struct {
 }
 
 type Subdivision struct {
-	Category           string
-	Code31662          string
-	Name               string
-	LocalVariant       string
-	LanguageCode       string
-	RomanizationSystem string
-	ParentSubdivision  string
+	CountryCode        string `db:"country_code"`
+	Category           string `db:"category"`
+	Code31662          string `db:"code_31662"`
+	Name               string `db:"name"`
+	LocalVariant       string `db:"local_variant"`
+	LanguageCode       string `db:"language_code"`
+	RomanizationSystem string `db:"romanization_system"`
+	ParentSubdivision  string `db:"parent_subdivision"`
 }
 
 func ExtractDetail(r io.Reader) (*Detail, error) {
