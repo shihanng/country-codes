@@ -17,11 +17,11 @@ func NewCountryTable(db *sqlx.DB) *CountryTable {
 
 func (c *CountryTable) UpsertCountry(ctx context.Context, alpha2Code, englishShortName string) error {
 	_, err := c.db.ExecContext(ctx, `
-INSERT INTO countries (alpha_2_code, english_sort_name)
+INSERT INTO countries (alpha_2_code, english_short_name)
     VALUES (?, ?)
 ON CONFLICT (alpha_2_code)
     DO UPDATE SET
-        english_sort_name = excluded.english_sort_name;
+        english_short_name = excluded.english_short_name;
     `, alpha2Code, englishShortName)
 
 	if err != nil {
@@ -36,7 +36,7 @@ func (c *CountryTable) getCountryEnglishShortName(ctx context.Context, alpha2Cod
 
 	err := c.db.QueryRowxContext(ctx, `
 SELECT
-    english_sort_name
+    english_short_name
 FROM
     countries
 WHERE
@@ -45,7 +45,7 @@ WHERE
     `, alpha2Code).Scan(&englishShortName)
 
 	if err != nil {
-		return "", errors.Wrap(err, "db: get english_sort_name")
+		return "", errors.Wrap(err, "db: get english_short_name")
 	}
 
 	return englishShortName, nil
