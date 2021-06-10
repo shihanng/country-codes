@@ -11,9 +11,10 @@ import (
 )
 
 type detailCommand struct {
-	logger        *log.Logger
-	countryTable  *db.CountryTable
-	languageTable *db.LanguageTable
+	logger           *log.Logger
+	countryTable     *db.CountryTable
+	languageTable    *db.LanguageTable
+	subdivisionTable *db.SubdivisionTable
 }
 
 func (c *detailCommand) Help() string {
@@ -72,6 +73,18 @@ func (c *detailCommand) Run(args []string) int {
 
 			if err := c.languageTable.SetLocalShortName(ctx, countryCode, lang.Alpha2, language.LocalShortName); err != nil {
 				logCtxLang.WithError(err).Error("failed to register language for country to db")
+				return 1
+			}
+		}
+
+		for _, subdivision := range detail.Subdivisions {
+			logCtxSub := logCtx.WithField("code_31662", subdivision.Code31662)
+			logCtxSub.Info("register subdivision")
+
+			subdivision.CountryCode = countryCode
+
+			if err := c.subdivisionTable.UpsertSubdivision(ctx, subdivision); err != nil {
+				logCtxSub.WithError(err).Error("failed to register subdivision for country to db")
 				return 1
 			}
 		}

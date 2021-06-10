@@ -10,9 +10,10 @@ import (
 )
 
 type Factory struct {
-	Logger        *log.Logger
-	CountryTable  *db.CountryTable
-	LanguageTable *db.LanguageTable
+	Logger           *log.Logger
+	CountryTable     *db.CountryTable
+	LanguageTable    *db.LanguageTable
+	SubdivisionTable *db.SubdivisionTable
 }
 
 func (f *Factory) ListCommand() (cli.Command, error) {
@@ -35,5 +36,6 @@ func (f *Factory) DetailCommand() (cli.Command, error) {
 		logger:        f.Logger,
 		countryTable:  f.CountryTable,
 		languageTable: f.LanguageTable,
+		subdivisionTable: f.SubdivisionTable,
 	}, nil
 }

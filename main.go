@@ -71,6 +71,7 @@ func main() {
 
 	factory.CountryTable = db.NewCountryTable(dbInstance)
 	factory.LanguageTable = db.NewLanguageTable(dbInstance)
+	factory.SubdivisionTable = db.NewSubdivisionTable(dbInstance)
 
 	logger.Info("done preparing db")
 
