@@ -10,8 +10,10 @@ import (
 )
 
 type Factory struct {
-	Logger       log.Logger
-	CountryTable *db.CountryTable
+	Logger           *log.Logger
+	CountryTable     *db.CountryTable
+	LanguageTable    *db.LanguageTable
+	SubdivisionTable *db.SubdivisionTable
 }
 
 func (f *Factory) ListCommand() (cli.Command, error) {
@@ -26,5 +28,14 @@ func (f *Factory) ListCommand() (cli.Command, error) {
 		fs:      fs,
 		buf:     &b,
 		flagCSV: fs.Bool("csv", false, "print to screen in comma separated value"),
+	}, nil
+}
+
+func (f *Factory) DetailCommand() (cli.Command, error) {
+	return &detailCommand{
+		logger:        f.Logger,
+		countryTable:  f.CountryTable,
+		languageTable: f.LanguageTable,
+		subdivisionTable: f.SubdivisionTable,
 	}, nil
 }

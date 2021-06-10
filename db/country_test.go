@@ -5,6 +5,7 @@ import (
 	"testing"
 
 	"github.com/jmoiron/sqlx"
+	"github.com/shihanng/country-codes/extract"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
 )
@@ -69,6 +70,19 @@ func (s *CountryTableSuite) TestCountryTable_UpsertCountry_Upsert() {
 	actual, err := s.countryTable.getCountryEnglishShortName(ctx, "MY")
 	s.NoError(err)
 	s.Equal("Malaysia", actual)
+}
+
+func (s *CountryTableSuite) TestCountryTable_UpdateDetail() {
+	ctx := context.Background()
+	s.NoError(s.countryTable.UpsertCountry(ctx, "MY", ""))
+
+	d := extract.Detail{
+		Alpha2Code:         "MY",
+		ShortName:          "MALAYSIA",
+		ShortNameLowerCase: "Malaysia",
+	}
+
+	s.NoError(s.countryTable.UpdateDetail(ctx, d))
 }
 
 func TestCountryTableSuite(t *testing.T) {

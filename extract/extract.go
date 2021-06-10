@@ -38,18 +38,23 @@ func ExtractAlpha2Code(r io.Reader) ([]Alpha2Code, error) {
 }
 
 type Detail struct {
-	Alpha2Code         string
-	ShortName          string
-	ShortNameLowerCase string
-	FullName           string
-	Alpha3Code         string
-	NumericCode        string
-	Remarks            string
-	Independent        string
-	TerritoryName      string
-	Status             string
+	Alpha2Code         string `db:"alpha_2_code"`
+	ShortName          string `db:"short_name"`
+	ShortNameLowerCase string `db:"short_name_lower_case"`
+	FullName           string `db:"full_name"`
+	Alpha3Code         string `db:"alpha_3_code"`
+	NumericCode        string `db:"numeric_code"`
+	Remarks            string `db:"remarks"`
+	Independent        string `db:"independent"`
+	TerritoryName      string `db:"territory_name"`
+	Status             string `db:"status"`
 	Languages          []AdministrativeLanguage
 	Subdivisions       []Subdivision
+}
+
+type Language struct {
+	Alpha2 string `db:"alpha_2_code"`
+	Alpha3 string `db:"alpha_3_code"`
 }
 
 type AdministrativeLanguage struct {
@@ -59,13 +64,14 @@ type AdministrativeLanguage struct {
 }
 
 type Subdivision struct {
-	Category           string
-	Code31662          string
-	Name               string
-	LocalVariant       string
-	LanguageCode       string
-	RomanizationSystem string
-	ParentSubdivision  string
+	CountryCode        string `db:"country_code"`
+	Category           string `db:"category"`
+	Code31662          string `db:"code_31662"`
+	Name               string `db:"name"`
+	LocalVariant       string `db:"local_variant"`
+	LanguageCode       string `db:"language_code"`
+	RomanizationSystem string `db:"romanization_system"`
+	ParentSubdivision  string `db:"parent_subdivision"`
 }
 
 func ExtractDetail(r io.Reader) (*Detail, error) {

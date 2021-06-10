@@ -19,6 +19,10 @@ const (
 	countryName = `Vierges`
 )
 
+func DetailURL(Alpha2Code string) string {
+	return `https://www.iso.org/obp/ui#iso:code:3166:` + Alpha2Code
+}
+
 func DownloadCountryListHTML(ctx context.Context, url string) (string, error) {
 	ctx, cancel := chromedp.NewContext(ctx)
 	defer cancel()
@@ -37,6 +41,25 @@ func DownloadCountryListHTML(ctx context.Context, url string) (string, error) {
 		chromedp.OuterHTML(tableSelector, &htmlContent),
 	); err != nil {
 		return "", errors.Wrap(err, "download: download country list")
+	}
+
+	return htmlContent, nil
+}
+
+func DownloadCountryDetailHTML(ctx context.Context, url string) (string, error) {
+	ctx, cancel := chromedp.NewContext(ctx)
+	defer cancel()
+
+	var htmlContent string
+
+	if _, err := chromedp.RunResponse(ctx,
+		chromedp.Navigate(url),
+		chromedp.WaitVisible(`#country-additional-info > h3`, chromedp.ByQuery),
+		chromedp.PollFunction(`(sel, txt) => document.querySelector(sel).innerText.includes(txt)`, nil,
+			chromedp.WithPollingArgs(`#country-additional-info > h3`, "Additional information")),
+		chromedp.OuterHTML(`#obpui-105541713 > div > div.v-customcomponent.v-widget.v-has-width.v-has-height > div > div > div:nth-child(2) > div > div > div.v-tabsheet-content.v-tabsheet-content-header > div > div > div > div > div.v-panel-content.v-panel-content-borderless.v-scrollable > div > div:nth-child(2) > div`, &htmlContent),
+	); err != nil {
+		return "", errors.Wrap(err, "download: download country detail")
 	}
 
 	return htmlContent, nil

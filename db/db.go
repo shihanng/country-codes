@@ -12,7 +12,7 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 )
 
-const Memory = ":memory:"
+const Memory = ":memory:?_foreign_keys=1"
 
 //go:embed migrations/*.sql
 var fs embed.FS
