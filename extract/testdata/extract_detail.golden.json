@@ -18,6 +18,7 @@
   ],
   "Subdivisions": [
     {
+      "CountryCode": "",
       "Category": "state",
       "Code31662": "BR-AC",
       "Name": "Acre",
@@ -27,6 +28,7 @@
       "ParentSubdivision": ""
     },
     {
+      "CountryCode": "",
       "Category": "state",
       "Code31662": "BR-AL",
       "Name": "Alagoas",
@@ -36,6 +38,7 @@
       "ParentSubdivision": ""
     },
     {
+      "CountryCode": "",
       "Category": "state",
       "Code31662": "BR-AP",
       "Name": "Amapá",
@@ -45,6 +48,7 @@
       "ParentSubdivision": ""
     },
     {
+      "CountryCode": "",
       "Category": "state",
       "Code31662": "BR-AM",
       "Name": "Amazonas",
@@ -54,6 +58,7 @@
       "ParentSubdivision": ""
     },
     {
+      "CountryCode": "",
       "Category": "state",
       "Code31662": "BR-BA",
       "Name": "Bahia",
@@ -63,6 +68,7 @@
       "ParentSubdivision": ""
     },
     {
+      "CountryCode": "",
       "Category": "state",
       "Code31662": "BR-CE",
       "Name": "Ceará",
@@ -72,6 +78,7 @@
       "ParentSubdivision": ""
     },
     {
+      "CountryCode": "",
       "Category": "federal district",
       "Code31662": "BR-DF",
       "Name": "Distrito Federal",
@@ -81,6 +88,7 @@
       "ParentSubdivision": ""
     },
     {
+      "CountryCode": "",
       "Category": "state",
       "Code31662": "BR-ES",
       "Name": "Espírito Santo",
@@ -90,6 +98,7 @@
       "ParentSubdivision": ""
     },
     {
+      "CountryCode": "",
       "Category": "state",
       "Code31662": "BR-GO",
       "Name": "Goiás",
@@ -99,6 +108,7 @@
       "ParentSubdivision": ""
     },
     {
+      "CountryCode": "",
       "Category": "state",
       "Code31662": "BR-MA",
       "Name": "Maranhão",
@@ -108,6 +118,7 @@
       "ParentSubdivision": ""
     },
     {
+      "CountryCode": "",
       "Category": "state",
       "Code31662": "BR-MT",
       "Name": "Mato Grosso",
@@ -117,6 +128,7 @@
       "ParentSubdivision": ""
     },
     {
+      "CountryCode": "",
       "Category": "state",
       "Code31662": "BR-MS",
       "Name": "Mato Grosso do Sul",
@@ -126,6 +138,7 @@
       "ParentSubdivision": ""
     },
     {
+      "CountryCode": "",
       "Category": "state",
       "Code31662": "BR-MG",
       "Name": "Minas Gerais",
@@ -135,6 +148,7 @@
       "ParentSubdivision": ""
     },
     {
+      "CountryCode": "",
       "Category": "state",
       "Code31662": "BR-PR",
       "Name": "Paraná",
@@ -144,6 +158,7 @@
       "ParentSubdivision": ""
     },
     {
+      "CountryCode": "",
       "Category": "state",
       "Code31662": "BR-PB",
       "Name": "Paraíba",
@@ -153,6 +168,7 @@
       "ParentSubdivision": ""
     },
     {
+      "CountryCode": "",
       "Category": "state",
       "Code31662": "BR-PA",
       "Name": "Pará",
@@ -162,6 +178,7 @@
       "ParentSubdivision": ""
     },
     {
+      "CountryCode": "",
       "Category": "state",
       "Code31662": "BR-PE",
       "Name": "Pernambuco",
@@ -171,6 +188,7 @@
       "ParentSubdivision": ""
     },
     {
+      "CountryCode": "",
       "Category": "state",
       "Code31662": "BR-PI",
       "Name": "Piauí",
@@ -180,6 +198,7 @@
       "ParentSubdivision": ""
     },
     {
+      "CountryCode": "",
       "Category": "state",
       "Code31662": "BR-RN",
       "Name": "Rio Grande do Norte",
@@ -189,6 +208,7 @@
       "ParentSubdivision": ""
     },
     {
+      "CountryCode": "",
       "Category": "state",
       "Code31662": "BR-RS",
       "Name": "Rio Grande do Sul",
@@ -198,6 +218,7 @@
       "ParentSubdivision": ""
     },
     {
+      "CountryCode": "",
       "Category": "state",
       "Code31662": "BR-RJ",
       "Name": "Rio de Janeiro",
@@ -207,6 +228,7 @@
       "ParentSubdivision": ""
     },
     {
+      "CountryCode": "",
       "Category": "state",
       "Code31662": "BR-RO",
       "Name": "Rondônia",
@@ -216,6 +238,7 @@
       "ParentSubdivision": ""
     },
     {
+      "CountryCode": "",
       "Category": "state",
       "Code31662": "BR-RR",
       "Name": "Roraima",
@@ -225,6 +248,7 @@
       "ParentSubdivision": ""
     },
     {
+      "CountryCode": "",
       "Category": "state",
       "Code31662": "BR-SC",
       "Name": "Santa Catarina",
@@ -234,6 +258,7 @@
       "ParentSubdivision": ""
     },
     {
+      "CountryCode": "",
       "Category": "state",
       "Code31662": "BR-SE",
       "Name": "Sergipe",
@@ -243,6 +268,7 @@
       "ParentSubdivision": ""
     },
     {
+      "CountryCode": "",
       "Category": "state",
       "Code31662": "BR-SP",
       "Name": "São Paulo",
@@ -252,6 +278,7 @@
       "ParentSubdivision": ""
     },
     {
+      "CountryCode": "",
       "Category": "state",
       "Code31662": "BR-TO",
       "Name": "Tocantins",
