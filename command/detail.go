@@ -57,6 +57,13 @@ func (c *detailCommand) Run(args []string) int {
 
 		logCtx.Info("done extracting detail")
 
+		if err := c.countryTable.UpdateDetail(ctx, *detail); err != nil {
+			logCtx.WithError(err).Error("failed to update country detail")
+			return 1
+		}
+
+		logCtx.Info("done update country detail")
+
 		for _, language := range detail.Languages {
 			logCtxLang := logCtx.WithField("language", language.Alpha2)
 			logCtxLang.Info("register language")
