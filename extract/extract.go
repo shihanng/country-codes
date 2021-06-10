@@ -38,16 +38,16 @@ func ExtractAlpha2Code(r io.Reader) ([]Alpha2Code, error) {
 }
 
 type Detail struct {
-	Alpha2Code         string
-	ShortName          string
-	ShortNameLowerCase string
-	FullName           string
-	Alpha3Code         string
-	NumericCode        string
-	Remarks            string
-	Independent        string
-	TerritoryName      string
-	Status             string
+	Alpha2Code         string `db:"alpha_2_code"`
+	ShortName          string `db:"short_name"`
+	ShortNameLowerCase string `db:"short_name_lower_case"`
+	FullName           string `db:"full_name"`
+	Alpha3Code         string `db:"alpha_3_code"`
+	NumericCode        string `db:"numeric_code"`
+	Remarks            string `db:"remarks"`
+	Independent        string `db:"independent"`
+	TerritoryName      string `db:"territory_name"`
+	Status             string `db:"status"`
 	Languages          []AdministrativeLanguage
 	Subdivisions       []Subdivision
 }

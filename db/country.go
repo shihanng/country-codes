@@ -5,6 +5,7 @@ import (
 
 	"github.com/cockroachdb/errors"
 	"github.com/jmoiron/sqlx"
+	"github.com/shihanng/country-codes/extract"
 )
 
 type CountryTable struct {
@@ -29,6 +30,24 @@ ON CONFLICT (alpha_2_code)
 	}
 
 	return nil
+}
+
+func (c *CountryTable) UpdateDetail(ctx context.Context, detail extract.Detail) error {
+	_, err := c.db.NamedExecContext(ctx, `
+UPDATE countries SET 
+      short_name            = :short_name
+    , short_name_lower_case = :short_name_lower_case
+    , full_name             = :full_name
+    , alpha_3_code          = :alpha_3_code
+    , numeric_code          = :numeric_code
+    , remarks               = :remarks
+    , independent           = :independent
+    , territory_name        = :territory_name
+    , status                = :status
+WHERE alpha_2_code = :alpha_2_code
+;`, detail)
+
+	return errors.Wrap(err, "db: update country detail")
 }
 
 func (c *CountryTable) getCountryEnglishShortName(ctx context.Context, alpha2Code string) (string, error) {
