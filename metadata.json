@@ -1,15 +1,24 @@
 {
   "title": "Country Codes",
-  "description": "Collection of country information which includes administrative languages and subdivisions",
+  "description": "Collection of country information which includes administrative languages and subdivisions. Sign in with GitHub to access the tables.",
   "source": "ISO",
   "source_url": "https://www.iso.org/",
   "databases": {
     "country_code": {
+      "allow": {
+        "gh_id": "*"
+      },
       "tables": {
         "schema_migrations": {
           "hidden": true
         }
       }
+    }
+  },
+  "plugins": {
+    "datasette-auth-github": {
+      "client_id": { "$env": "GITHUB_CLIENT_ID" },
+      "client_secret": { "$env": "GITHUB_CLIENT_SECRET" }
     }
   }
 }
