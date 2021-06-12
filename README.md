@@ -9,13 +9,13 @@ Tools to obtain latest versions of country codes from [ISO's Online Browsing Pla
 #### Install
 
 ```console
-poetry run datasette install datasette-auth-github
+datasette install datasette-auth-github
 ```
 
 #### Installed
 
 ```console
-poetry run datasette plugins
+datasette plugins
 [
     {
         "name": "datasette-auth-github",
