@@ -32,4 +32,4 @@ jobs:
           datasette publish vercel country_code.db \
             --token $NOW_TOKEN \
             --project country-codes \
-            --metadata metadata.yaml
+            --metadata metadata.json
