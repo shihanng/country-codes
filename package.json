@@ -1,0 +1,21 @@
+{
+  "name": "country-codes",
+  "version": "1.0.0",
+  "description": "Tools to obtain latest versions of country codes from [ISO's Online Browsing Platform (OBP)](https://www.iso.org/obp/).",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shihanng/country-codes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shihanng/country-codes/issues"
+  },
+  "homepage": "https://github.com/shihanng/country-codes#readme",
+  "dependencies": {
+    "vercel": "^23.0.0"
+  }
+}
