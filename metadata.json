@@ -1,0 +1,15 @@
+{
+  "title": "Country Codes",
+  "description": "Collection of country information which includes administrative languages and subdivisions",
+  "source": "ISO",
+  "source_url": "https://www.iso.org/",
+  "databases": {
+    "country_code": {
+      "tables": {
+        "schema_migrations": {
+          "hidden": true
+        }
+      }
+    }
+  }
+}
