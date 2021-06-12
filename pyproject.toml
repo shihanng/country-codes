@@ -6,6 +6,7 @@ authors = ["Shi Han NG <shihanng@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
+datasette = "^0.57.1"
 
 [tool.poetry.dev-dependencies]
 
