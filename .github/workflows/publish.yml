@@ -1,0 +1,35 @@
+name: Publish Datasette
+
+on:
+  pull_request:
+    branches:
+      - "**"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    name: Publish to Vercel
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: "3.9"
+      - uses: actions/cache@v2
+        name: Configure pip caching
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Deploy Datasette using Vercel
+        env:
+          NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
+        run: |-
+          datasette publish vercel country_code.db \
+            --token $NOW_TOKEN \
+            --project country-codes \
+            --metadata metadata.yaml \
