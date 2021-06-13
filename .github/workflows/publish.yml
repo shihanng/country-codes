@@ -1,9 +1,9 @@
 name: Publish Datasette
 
 on:
-  pull_request:
+  push:
     branches:
-      - "**"
+      - main
 
 jobs:
   publish:
