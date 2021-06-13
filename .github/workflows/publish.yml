@@ -35,4 +35,6 @@ jobs:
             --token $NOW_TOKEN \
             --project country-codes \
             --install=datasette-auth-github \
+            --plugin-secret datasette-auth-github client_id ${{ secrets.NOW_GITHUB_CLIENT_ID }} \
+            --plugin-secret datasette-auth-github client_secret ${{ secrets.NOW_GITHUB_CLIENT_SECRET }} \
             --metadata metadata.json
