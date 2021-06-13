@@ -1,0 +1,43 @@
+title: Country Codes
+description:
+  Collection of country information which includes administrative languages
+  and subdivisions. Sign in with GitHub to access the tables.
+source: ISO
+source_url: https://www.iso.org/
+databases:
+  country_code:
+    allow:
+      gh_id: "*"
+    tables:
+      schema_migrations:
+        hidden: true
+    queries:
+      languages:
+        sql: |-
+          select
+            count(*) as num,
+            language_code
+          from
+            country_languages
+          group by
+            language_code
+          order by
+            num desc
+        title: Number of countries that use specific language as administrative language
+      subdivisions:
+        sql: |-
+          SELECT
+              countries.short_name_lower_case
+              , count(*)
+          FROM
+              subdivisions
+              INNER JOIN countries ON countries.alpha_2_code = subdivisions.country_code
+          GROUP BY
+              country_code
+        title: Number of subdivisions per country
+plugins:
+  datasette-auth-github:
+    client_id:
+      "$env": NOW_GITHUB_CLIENT_ID
+    client_secret:
+      "$env": NOW_GITHUB_CLIENT_SECRET

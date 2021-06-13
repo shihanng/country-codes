@@ -34,4 +34,4 @@ jobs:
             --project country-codes \
             --install=datasette-auth-github==0.13.1 \
             --install=httpx==0.17 \
-            --metadata metadata.json
+            --metadata metadata.yml
