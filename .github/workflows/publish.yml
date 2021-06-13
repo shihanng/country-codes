@@ -32,7 +32,7 @@ jobs:
           NOW_GITHUB_CLIENT_SECRET: ${{ secrets.NOW_GITHUB_CLIENT_SECRET }}
         run: |-
           datasette publish vercel country_code.db \
-            --token $NOW_TOKEN \
             --project country-codes \
-            --install=datasette-auth-github \
+            --install=datasette-auth-github==0.13.1 \
+            --install=httpx==0.17 \
             --metadata metadata.json
