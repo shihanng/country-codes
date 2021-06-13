@@ -4,6 +4,32 @@ Tools to obtain latest versions of country codes from [ISO's Online Browsing Pla
 
 ## Development note
 
+### Datasette plugins
+
+#### Install
+
+```console
+datasette install datasette-auth-github
+```
+
+#### Installed
+
+```console
+datasette plugins
+[
+    {
+        "name": "datasette-auth-github",
+        "static": false,
+        "templates": true,
+        "version": "0.13.1",
+        "hooks": [
+            "menu_links",
+            "register_routes"
+        ]
+    }
+]
+```
+
 ### Migration
 
 We use [`migration`](https://github.com/golang-migrate/migrate) to manage schema migration of our SQLite3 DB.
