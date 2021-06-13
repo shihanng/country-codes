@@ -28,8 +28,6 @@ jobs:
       - name: Deploy Datasette using Vercel
         env:
           NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
-          NOW_GITHUB_CLIENT_ID: ${{ secrets.NOW_GITHUB_CLIENT_ID }}
-          NOW_GITHUB_CLIENT_SECRET: ${{ secrets.NOW_GITHUB_CLIENT_SECRET }}
         run: |-
           datasette publish vercel country_code.db \
             --project country-codes \
