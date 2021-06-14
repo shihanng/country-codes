@@ -1,5 +1,4 @@
 datasette==0.57.1
 datasette-auth-github==0.13.1
 datasette-publish-vercel==0.9.3
-datasette-vega==0.6.2
 httpx==0.17
