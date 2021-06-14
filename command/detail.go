@@ -80,7 +80,6 @@ func (c *detailCommand) Run(args []string) int {
 
 			if err := c.languageTable.SetLocalShortName(ctx, countryCode, lang.Alpha2, language.LocalShortName); err != nil {
 				logCtxLang.WithError(err).Error("failed to register language for country to db")
-				return 1
 			}
 		}
 
@@ -92,7 +91,6 @@ func (c *detailCommand) Run(args []string) int {
 
 			if err := c.subdivisionTable.UpsertSubdivision(ctx, subdivision); err != nil {
 				logCtxSub.WithError(err).Error("failed to register subdivision for country to db")
-				return 1
 			}
 		}
 	}
