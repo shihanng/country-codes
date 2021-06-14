@@ -33,5 +33,6 @@ jobs:
             --token $NOW_TOKEN \
             --project country-codes \
             --install=datasette-auth-github==0.13.1 \
+            --install=datasette-vega==0.6.2 \
             --install=httpx==0.17 \
             --metadata metadata.yml
