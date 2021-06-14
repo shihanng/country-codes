@@ -6,8 +6,6 @@ source: ISO
 source_url: https://www.iso.org/
 databases:
   country_code:
-    allow:
-      gh_id: "*"
     tables:
       schema_migrations:
         hidden: true

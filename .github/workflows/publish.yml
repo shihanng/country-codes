@@ -32,6 +32,5 @@ jobs:
           datasette publish vercel country_code.db \
             --token $NOW_TOKEN \
             --project country-codes \
-            --install=datasette-auth-github==0.13.1 \
             --install=httpx==0.17 \
             --metadata metadata.yml
