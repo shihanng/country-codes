@@ -12,7 +12,7 @@ databases:
       schema_migrations:
         hidden: true
     queries:
-      languages:
+      count_languages:
         sql: |-
           select
             count(*) as num,
@@ -24,7 +24,7 @@ databases:
           order by
             num desc
         title: Number of countries that use specific language as administrative language
-      subdivisions:
+      count_subdivisions:
         sql: |-
           SELECT
               countries.short_name_lower_case
